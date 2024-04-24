@@ -1,5 +1,5 @@
 {
-  "name": "qrcode.react",
+  "name": "yupoo-qrcode.react",
   "version": "3.1.0",
   "description": "React component to generate QR codes",
   "keywords": [
@@ -19,9 +19,9 @@
   },
   "scripts": {
     "build": "yarn run build:code && yarn run build:examples",
-    "build:code": "tsup src/index.tsx -d lib --format esm,cjs --dts --legacy-output --target=es2017 --platform=browser",
-    "build:examples": "tsup examples/demo.tsx -d examples --format iife --env.NODE_ENV production --minify --target=es2017 --legacy-output",
-    "build:examples:dev": "tsup examples/demo.tsx -d examples --format iife --env.NODE_ENV development --target=es2017 --legacy-output",
+    "build:code": "tsup src/index.tsx -d lib --format esm,cjs --dts --legacy-output --target=es5 --platform=browser",
+    "build:examples": "tsup examples/demo.tsx -d examples --format iife --env.NODE_ENV production --minify --target=es5 --legacy-output",
+    "build:examples:dev": "tsup examples/demo.tsx -d examples --format iife --env.NODE_ENV development --target=es5 --legacy-output",
     "lint": "eslint .",
     "pretty": "prettier --write '{*,.*}.{mjs,js,json}' '**/*.{js,json}'",
     "prepack": "make clean && make all && yarn run typecheck",
@@ -45,6 +45,7 @@
   },
   "devDependencies": {
     "@jest/globals": "^29.5.0",
+    "@swc/core": "^1.5.0",
     "@types/node": "^20.4.10",
     "@types/react": "^18.0.8",
     "@types/react-dom": "^18.0.3",
