@@ -1,6 +1,6 @@
 {
   "name": "yupoo-qrcode.react",
-  "version": "3.1.0",
+  "version": "3.1.1",
   "description": "React component to generate QR codes",
   "keywords": [
     "react",
